@@ -154,7 +154,7 @@
 					<version>3.3.0</version>
 					<configuration>
 						<archive>
-							<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+							<manifestFile>${project.build.directory}/DEFAULT.MF/MANIFEST.MF</manifestFile>
 						</archive>
 					</configuration>
 				</plugin>
@@ -170,6 +170,7 @@
 								<goal>manifest</goal>
 							</goals>
 							<configuration>
+								<manifestLocation>${project.build.directory}/DEFAULT.MF</manifestLocation>
 								<instructions>
 									<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 								</instructions>
